@@ -20,6 +20,7 @@ import type {
     ProcessedComputable
 } from "util/computed";
 import { convertComputable, processComputable } from "util/computed";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createLazyProxy } from "util/proxies";
 import { renderJSX } from "util/vue";
 import type { Ref } from "vue";

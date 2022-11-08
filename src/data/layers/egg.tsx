@@ -16,11 +16,11 @@ import type { DecimalSource } from "util/bignum";
 import { render } from "util/vue";
 import { createLayerTreeNode, createResetButton } from "../common";
 
-const id = "p";
+const id = "e";
 const layer = createLayer(id, function (this: BaseLayer) {
-    const name = "Prestige";
-    const color = "#4BDC13";
-    const points = createResource<DecimalSource>(0, "prestige points");
+    const name = "Egg";
+    const color = "#FFC90E";
+    const points = createResource<DecimalSource>(0, "egg points");
 
     const conversion = createCumulativeConversion(() => ({
         scaling: createPolynomialScaling(10, 0.5),
@@ -50,8 +50,8 @@ const layer = createLayer(id, function (this: BaseLayer) {
     }));
 
     const hotkey = createHotkey(() => ({
-        description: "Reset for prestige points",
-        key: "p",
+        description: "Reset for Egg Points",
+        key: "e",
         onPress: resetButton.onClick
     }));
 

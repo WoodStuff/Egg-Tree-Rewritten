@@ -11,6 +11,7 @@ import MainDisplay from "features/resources/MainDisplay.vue";
 import { createResource } from "features/resources/resource";
 import { addTooltip } from "features/tooltips/tooltip";
 import { createResourceTooltip } from "features/trees/tree";
+import { createUpgrade } from "features/upgrades/upgrade";
 import { BaseLayer, createLayer } from "game/layers";
 import type { DecimalSource } from "util/bignum";
 import { render } from "util/vue";
@@ -54,6 +55,15 @@ const layer = createLayer(id, function (this: BaseLayer) {
         key: "e",
         onPress: resetButton.onClick
     }));
+
+	const addGainUpgrade = createUpgrade(() => ({
+		display: {
+			title: "Generator of Genericness",
+			description: "Gain 1 point every second"
+		},
+		cost: 1,
+		resource: points
+	}));
 
     return {
         name,
